@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Highlight Bold Words</title>
+</head>
+
+<body>
+    <a href="#" onmouseover="highlight()" onmouseout="unhighlight()"><strong>Link text is – Click here to highlight bold words.</strong></a>
+    <p id="myPara">Lorem ipsum <strong>dolor sit amet</strong> consectetur adipisicing <strong> Sint inventore</strong> fuga perferendis
+        <strong>similique</strong>, minus nobis officia <strong>consequuntur eaque</strong> corrupti?</p>
+    <script>
+        var x = document.getElementById("myPara");
+        var bold = x.getElementsByTagName("strong");
+
+        function highlight() {
+            for (let i = 0; i < bold.length; i++) {
+                bold[i].style.backgroundColor = "yellow";
+            }
+        }
+
+        function unhighlight() {
+            for (let i = 0; i < bold.length; i++) {
+                bold[i].style.backgroundColor = "white";
+            }
+        }
+    </script>
+</body>
+
+</html>
